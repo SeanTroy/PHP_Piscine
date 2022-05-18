@@ -1,0 +1,36 @@
+
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles representations of a point in space, a.k.a. vertexes.
+
+An instance can be constructed from an array with x, y, z and w coordinates
+and an instance of the Color class:
+
+new Vertex( array( 'x' => 50.0, 'y' => 25.0, 'z' => 12.0,
+'w' => 2.0, 'color' => $green ) );
+
+The z and color values are optional, defaults are 1.0 and 0xFFFFFF (white).
+
+For handling the printing of the construct and destruct output, there is a
+static boolean attribute 'verbose'. Usage:
+Vertex::$verbose = False;	(default, provides no output)
+Vertex::$verbose = True;	(provides output)
+
+The class provides the following methods :
+
+Vertex   getX();
+Vertex   getY();
+Vertex   getZ();
+Vertex   getW();
+Vertex   getColor();
+For returning the values of the corresponding attributes.
+
+Vertex   setX($value);
+Vertex   setY($value);
+Vertex   setZ($value);
+Vertex   setW($value);
+Vertex   setColor($value);
+For setting the values to the corresponding attributes.
+
+Vertex   doc();
+For retrieving the contents of this doc file in a string.
+---------------------------------------------------------------------- Vertex ->

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Calculator</title>
+</head>
+
+<body>
+	<form onsubmit="calculate()">
+		<input type="text" id="value1" required><br />
+		<select type="text" id="operator">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select><br />
+		<input type="text" id="value2" required><br />
+		<input type="submit" value="Try me!"><br />
+	</form>
+	<script>
+		window.onload = function () {
+			setInterval("timeOut()", 30000);
+		}
+		function timeOut() {
+			alert('Please, use me...');
+		}
+		function calculate() {
+			var operator = document.getElementById("operator").value;
+			var value1str = document.getElementById('value1').value;
+			var value2str = document.getElementById('value2').value;
+			var value1 = parseInt(value1str);
+			var value2 = parseInt(value2str);
+			if (value1 < 0 || value2 < 0 || value1.toString().length != value1str.length
+				|| value2.toString().length != value2str.length) {
+				output('Error :(');
+			}
+			else if (operator === "+") {
+				var result = value1 + value2;
+				output(result);
+			}
+			else if (operator === "-") {
+				var result = value1 - value2;
+				output(result);
+			}
+			else if (operator === "*") {
+				var result = value1 * value2;
+				output(result);
+			}
+			else if (operator === "/") {
+				if (value2 == 0) {
+					output("It's over 9000!");
+				} else {
+					var result = value1 / value2;
+					output(result);
+				}
+			}
+			else if (operator === "%") {
+				if (value2 == 0) {
+					output("It's over 9000!");
+				} else {
+					var result = value1 / value2;
+					output(result);
+				}
+			}
+			function output(param) {
+				console.log(param);
+				alert(param);
+			}
+		}
+	</script>
+</body>
+
+</html>

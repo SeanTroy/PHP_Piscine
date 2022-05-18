@@ -1,0 +1,36 @@
+body {text-align: center}
+h1 {font-size: 2vw;}
+.pictcenter {
+	margin-left: auto;
+	margin-right: auto;
+	width: 50vw;
+}
+table {
+	table-layout: fixed;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+th, td {
+	width: 60vw;
+	height: 4vw;
+	border: 0.1vw solid black;
+	position: relative;
+}
+.noborder {
+	border: 0px
+}
+.groupname{text-align:center; vertical-align: center; font-weight: bold; font-size: 0.5vw;}
+.center{text-align:center; vertical-align: center; font-weight: bold; font-size: 1.5vw;}
+.left{bottom:0px; left:2px; position: absolute; font-size: 0.7vw;}
+.right{bottom:0px; right:2px; position: absolute; font-size: 0.7vw;}
+#color1 {background-color:#4aac54}
+#color2 {background-color:#e6a8ff}
+#color3 {background-color:#ac8006}
+#color4 {background-color:#d6d61d}
+#color5 {background-color:#14818f}
+#color6 {background-color:#11a585}
+#color7 {background-color:#c57334}
+#color8 {background-color:#968b83}
+#color9 {background-color:#977258}
+#color10 {background-color:#b45e9b}

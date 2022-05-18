@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Balloon Page</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+		}
+
+		#balloon {
+			border-radius: 50%;
+			margin-top: 10%;
+			margin-left: 10%;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="balloon" id="balloon" style="height: 200px; width: 200px; background-color: red">
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+
+		$(document).ready(function () {
+
+			var colors = Array('red', 'green', 'blue');
+			var balloon = $('#balloon');
+			var count = 0;
+			var clicked = false;
+			$('#balloon').click(function () {
+				var size = $('#balloon').width();
+				$('#balloon').width(size + 10);
+				$('#balloon').height(size + 10);
+				count += 1;
+				if (size > 410) {
+					$('#balloon').width(200);
+					$('#balloon').height(200);
+					count = 0;
+				}
+				$('#balloon').css('background-color', colors[count % 3]);
+				clicked = true;
+			});
+			$('#balloon').mouseleave(function () {
+				size = $('#balloon').width();
+				if (size > 200 && clicked == false) {
+					if (count == 0)
+						count = 3;
+					$('#balloon').width(size - 5);
+					$('#balloon').height(size - 5);
+					count -= 1;
+				}
+					$('#balloon').css('background-color', colors[count % 3]);
+					clicked = false;
+			});
+		});
+	</script>
+</body>
+
+</html>
